@@ -7,5 +7,10 @@ routes.get('/', (req, res) =>{
 routes.get('/new', (req, res) =>{
     res.send('User New Form')
 })
-
+routes.post('/', (req, res) =>{
+  res.send('create user')
+})
+routes.get('/:id', (req, res) =>{
+    res.send(`update use with ID ${req.params.id}`)
+})
 module.exports = routes; 
