@@ -7,6 +7,8 @@ app.get('/', (req, res) =>{
 //    sends the status of the error
 //    res.sendStatus(404)
 // res.status(404).send('page not found')
-   res.render("index")
+   res.render("index2", {text: 'world'})
 })
+const userRouter = require('./routes/User')
+app.use('/user', userRouter)
 app.listen(3000)
